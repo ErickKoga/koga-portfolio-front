@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    -45deg,
+    rgb(0 121 140),
+    rgb(90 12 155),
+    rgb(0 61 91)
+  );
+  background-size: 400% 100%;
+  animation: gradient 15s ease infinite;
+  color: rgb(224 224 224);
+  height: 8vh;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 5vw;
+}
+
+.navbar li {
+  padding: 1vh 2vh;
+  font-weight: 400;
+  font-size: 2vh;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5vh;
+  border: 1px solid rgb(255 255 255);
+  cursor: pointer;
+}
+
+.navbar li:hover {
+  background-color: rgb(0 0 0 / 50%);
+  color: rgb(176 176 176);
+}
+
+.navbar li:active {
+  background-color: rgb(0 0 0);
+  color: rgb(176 176 176);
+}
+
+.navbar p {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* #EDAE49, #D1495B, #00798C, #30638E, #003D5B */
