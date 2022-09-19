@@ -6,6 +6,8 @@
 
   /* Box Model */
   background: url("../assets/white-background.svg");
+
+  color: rgb(32, 32, 32);
 }
 
 .main {
@@ -29,6 +31,7 @@
   align-items: center;
   flex-flow: column nowrap;
   height: 100vh;
+  padding: 0 2vh;
 }
 
 .main .profile .title {
@@ -99,7 +102,6 @@
 
 .contact .contactTable .contactHeader {
   text-align: center;
-  width: 25vw;
   grid-column-end: span 2;
   background: linear-gradient(
     -45deg,
