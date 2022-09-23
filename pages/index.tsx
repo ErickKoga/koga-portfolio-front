@@ -26,9 +26,9 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Erick Koga</title>
+        <title>Erick Koga - Desenvolvedor</title>
         <meta
-          name="description"
+          name="Erick Koga - Desenvolvedor"
           content="Página inicial do portifólio de Erick Koga"
         />
         <link rel="icon" href="/favicon.svg" />
