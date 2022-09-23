@@ -31,7 +31,7 @@ const Home: NextPage = () => {
           name="description"
           content="Página inicial do portifólio de Erick Koga"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <Nav />
