@@ -5,7 +5,11 @@
   grid-template-columns: 1fr;
 
   /* Box Model */
-  background: url("../assets/white-background.svg");
+  background: url("../assets/yama-rindo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 
   color: rgb(32, 32, 32);
 }
@@ -83,7 +87,6 @@
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
-  background: url("../assets/white-background.svg");
 }
 
 .contact .contactTable {
