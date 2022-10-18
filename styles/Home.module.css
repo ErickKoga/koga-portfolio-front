@@ -21,12 +21,16 @@
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr;
   gap: 10vh;
-  padding-bottom: 2em;
 }
 
 .main section {
   scroll-margin-top: 8vh;
-  display: flex;
+}
+
+.main h2 {
+  width: 100%;
+  font-weight: 800;
+  font-size: 6vh;
 }
 
 .main .profile {
@@ -34,7 +38,7 @@
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  height: 100vh;
+  height: 92vh;
   padding: 0 2vh;
 }
 
@@ -45,92 +49,98 @@
 
 .main .about {
   display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
   align-items: center;
-  padding-bottom: 20vh;
+  padding: 0 2vh;
 }
+
 
 .main .about span {
   display: flex;
-  flex-flow: row nowrap;
+  background-color: rgba(255, 255, 255, 0.75);
+  flex-flow: row;
   justify-content: center;
   align-items: center;
-  width: 50vw;
-  max-width: 50vh;
   height: 6vh;
+  min-width: 20vw;
+  padding: 2em;
   box-shadow: 0 1vw 1.5vw -1vw rgb(0 0 0 / 80%);
-  font-size: 3vh;
 }
 
-.main h2 {
-  font-weight: 800;
-  font-size: 6vh;
+.main .about .githubSection {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: left;
+  padding: 2em;
+}
+
+.gitButton {
+  background: linear-gradient(
+    -45deg,
+    rgb(90 12 155),
+    rgb(0 61 91)
+  );
+  text-align: center;
+  color: rgb(244, 244, 244);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  box-shadow: 0 1vw 1.5vw -1vw rgb(0 0 0 / 80%);
+  cursor: pointer;
 }
 
 .profileImage {
   width: 20vh;
   border-radius: 100%;
   box-shadow: 0 1.5vw 1.5vw -1vw rgb(0 0 0 / 80%);
-  transition: box-shadow 0.1s ease-in-out;
 }
 
-.picture:hover {
-  box-shadow: 0 1vw 1.5vw -1vw rgb(0 0 0 / 80%);
-}
-
-.title {
-  font-size: 6vh;
-}
 .contact {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
+  background-color: rgba(32, 32, 32);
+  color: rgb(244, 244, 244);
+  padding: 1em 2vh;
+}
+
+.contact h2 {
+  width: auto;
 }
 
 .contact .contactTable {
   display: grid;
-  grid-template-rows: 4;
-  grid-template-columns: 2;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 1vw 1.5vw -1vw rgb(0 0 0 / 80%);
-  background: rgb(244, 244, 244);
-}
-.contact .contactTable p {
-  margin: 0;
-  padding: 0.75em;
+  grid-template-rows: 2;
 }
 
 .contact .contactTable .contactHeader {
   text-align: center;
   grid-column-end: span 2;
-  background: linear-gradient(
-    -45deg,
-    rgb(0 121 140),
-    rgb(90 12 155),
-    rgb(0 61 91)
-  );
-  background-size: 400% 100%;
-  animation: gradient 15s ease infinite;
-  color: rgb(224 224 224);
 }
 
-.contact .contactTable .contactButton {
-  text-align: center;
-  grid-column-end: span 2;
-  cursor: pointer;
-  background: rgb(32, 32, 32);
-  color: rgb(255, 255, 255);
-}
-
-.textToLeft {
+.contact .contactTable p {
+  margin: 0;
+  padding: 0.75em;
   text-align: left;
 }
 
-.textToRight {
-  text-align: right;
+.buttonBox {
+  display: flex;
+  gap: 1em;
+}
+
+.contactButton {
+  padding: 0.5em;
+  border-radius: 0.2em;
+  text-align: center;
+  background: linear-gradient(
+    -45deg,
+    rgb(90 12 155),
+    rgb(0 61 91)
+  );
+  cursor: pointer;
+  color: rgb(224, 224, 224);
 }
 
 @keyframes expandbox {

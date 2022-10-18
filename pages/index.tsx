@@ -19,6 +19,8 @@ import {
   SiNestjs,
   SiDocker,
   SiPostgresql,
+  SiGithub,
+  SiLinkedin,
 } from "react-icons/si";
 import Link from "next/link";
 
@@ -52,47 +54,71 @@ const Home: NextPage = () => {
         </section>
         <section className={styles.about} id="about">
           <h2>Sobre mim</h2>
-          <span className={styles.skillRow}>
-            <SiJavascript /> JavaScript
-          </span>
-          <span className={styles.skillRow}>
-            <SiTypescript /> TypeScript
-          </span>
-          <span className={styles.skillRow}>
-            <SiReact /> React
-          </span>
-          <span className={styles.skillRow}>
-            <SiNextdotjs /> Next.js
-          </span>
-          <span className={styles.skillRow}>
-            <SiNestjs /> NestJS
-          </span>
-          <span className={styles.skillRow}>
-            <SiDocker /> Docker
-          </span>
-          <span className={styles.skillRow}>
-            <SiPostgresql /> PostgreSQL
-          </span>
+          <div>
+            <span className={styles.skillRow}>
+              <SiJavascript /> JavaScript
+            </span>
+            <span className={styles.skillRow}>
+              <SiTypescript /> TypeScript
+            </span>
+            <span className={styles.skillRow}>
+              <SiReact /> React
+            </span>
+            <span className={styles.skillRow}>
+              <SiNextdotjs /> Next.js
+            </span>
+            <span className={styles.skillRow}>
+              <SiNestjs /> NestJS
+            </span>
+            <span className={styles.skillRow}>
+              <SiDocker /> Docker
+            </span>
+            <span className={styles.skillRow}>
+              <SiPostgresql /> PostgreSQL
+            </span>
+          </div>
+          <div className={styles.githubSection}>
+            <a href="https://github.com/ErickKoga" target="_blank" rel="noreferrer">
+              <div className={styles.gitButton}>
+                <p>Confira meu GitHub!</p>
+                <SiGithub />
+              </div>
+            </a>
+            <h3>Algumas das coisas que estou trabalhando</h3>
+            <p><b>API Boilerplate</b>: uma base em back-end com autenticação, autorização e cadastro.</p>
+            <p><b>Portfolio</b>: meu site pessoal.</p>
+          </div>
+          
         </section>
         <section className={styles.contact} id="contact">
           <h2>Fale comigo</h2>
           <div className={styles.contactTable}>
-            <p className={styles.contactHeader}>Dados de contato</p>
-            <p className={styles.textToRight}>
+            <h3 className={styles.contactHeader}>Dados de contato</h3>
+            <p>
               <FaPhoneSquareAlt /> Telefone
             </p>
-            <p className={styles.textToLeft}>(31) 99686-8416</p>
-            <p className={styles.textToRight}>
+            <p>(31) 99686-8416</p>
+            <p>
               <FaEnvelopeSquare /> E-mail
             </p>
-            <p className={styles.textToLeft}>erick.koga@outlook.com</p>
-            <p className={styles.contactButton}>
-              <Link href="https://wa.me/+5531996868416">
-                <span>
-                  <FaWhatsappSquare /> Whatsapp
-                </span>
-              </Link>
-            </p>
+            <p>erick.koga@outlook.com</p>
+          </div>
+          <div className={styles.buttonBox}>
+            <a href="https://github.com/ErickKoga" target="_blank" rel="noreferrer">
+              <p className={styles.contactButton}>
+                <SiGithub /> GitHub
+              </p>
+            </a>
+            <a href="https://linkedin.com/in/erick-koga" target="_blank" rel="noreferrer">
+              <p className={styles.contactButton}>
+                <SiLinkedin /> LinkedIn
+              </p>
+            </a>
+            <a href="https://wa.me/+5531996868416" target="_blank" rel="noreferrer">
+              <p className={styles.contactButton}>
+                <FaWhatsappSquare /> Whatsapp
+              </p>
+            </a>
           </div>
         </section>
       </main>
