@@ -1,0 +1,104 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  margin: 0;
+  padding: 0;
+}
+
+.container h1 {
+  margin: 0 0 1.5em 0;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.container h2 {
+  margin: 0 0 1.5em 0;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container h3 {
+  margin: 0 0 1.5em 0;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container h4 {
+  margin: 0 0 1.5em 0;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.container p {
+  margin: 0 0 1.5em 0;
+
+  font-size: 12px;
+}
+
+.container li {
+  margin: 0 0 0.5em 0;
+
+  font-size: 12px;
+}
+
+.lineSeparator {
+  border-bottom: 1px solid rgba(29, 38, 66, 0.5);
+}
+
+.card {
+  padding: 0.5em;
+}
+
+.info {
+  margin: 1em;
+}
+
+.info section {
+  margin: 0 0 1.5em 0;
+  line-height: 1.25;
+}
+
+.personal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+  background-image: linear-gradient(90deg, rgb(29, 38, 66), rgb(21, 35, 77));
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 1.5em;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25) inset;
+}
+
+.personal .contactInfo {
+  text-align: right;
+}
+
+.personal .profileImage {
+  max-width: 15vh;
+  margin: 1.5em auto 1.5em auto;
+}
+
+.personal p {
+  font-size: 12px;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  .container {
+    grid-template-columns: auto 8.5cm;
+  }
+
+  .personal {
+    height: 110%;
+  }
+}

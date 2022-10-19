@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import profilephoto from "../assets/profilephoto.png";
-import vscode from "../assets/vscode.png";
 import Image from "next/image";
 import Nav from "../components/Nav";
 import styles from "../styles/Home.module.css";
@@ -22,7 +21,6 @@ import {
   SiGithub,
   SiLinkedin,
 } from "react-icons/si";
-import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
