@@ -1,10 +1,8 @@
 .container {
-  /* Display */
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr;
-
-  /* Box Model */
+  
   background: url("../assets/yama-rindo.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -15,12 +13,13 @@
 }
 
 .main {
-  grid-row: 2;
-  text-align: center;
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr;
+  grid-row: 2;
   gap: 10vh;
+  
+  text-align: center;
 }
 
 .main section {
@@ -29,15 +28,17 @@
 
 .main h2 {
   width: 100%;
-  font-weight: 800;
+  
   font-size: 6vh;
+  font-weight: 800;
 }
 
 .main .profile {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  flex-flow: column nowrap;
+  
   height: 92vh;
   padding: 0 2vh;
 }
@@ -52,19 +53,22 @@
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
+  
   padding: 0 2vh;
 }
 
 
 .main .about span {
   display: flex;
-  background-color: rgba(255, 255, 255, 0.75);
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  
   height: 6vh;
   min-width: 20vw;
   padding: 2em;
+  
+  background-color: rgba(255, 255, 255, 0.75);
   box-shadow: 0 1vw 1.5vw -1vw rgb(0 0 0 / 80%);
 }
 
@@ -76,22 +80,25 @@
 }
 
 .gitButton {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  
   background: linear-gradient(
     -45deg,
     rgb(90 12 155),
     rgb(0 61 91)
   );
-  text-align: center;
-  color: rgb(244, 244, 244);
-  padding: 0.5em;
-  border-radius: 0.5em;
   box-shadow: 0 1vw 1.5vw -1vw rgb(0 0 0 / 80%);
+
+  color: rgb(244, 244, 244);
+  text-align: center;
   cursor: pointer;
-}
+  }
 
 .profileImage {
   width: 20vh;
   border-radius: 100%;
+  
   box-shadow: 0 1.5vw 1.5vw -1vw rgb(0 0 0 / 80%);
 }
 
@@ -100,9 +107,12 @@
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgba(32, 32, 32);
-  color: rgb(244, 244, 244);
+  
   padding: 1em 2vh;
+  
+  background-color: rgba(32, 32, 32);
+  
+  color: rgb(244, 244, 244);
 }
 
 .contact h2 {
@@ -122,6 +132,7 @@
 .contact .contactTable p {
   margin: 0;
   padding: 0.75em;
+  
   text-align: left;
 }
 
@@ -132,27 +143,18 @@
 
 .contactButton {
   padding: 0.5em;
+
   border-radius: 0.2em;
-  text-align: center;
+  
   background: linear-gradient(
     -45deg,
     rgb(90 12 155),
     rgb(0 61 91)
   );
-  cursor: pointer;
-  color: rgb(224, 224, 224);
-}
 
-@keyframes expandbox {
-  0% {
-    height: 19vw;
-  }
-  20% {
-    height: 20vw;
-  }
-  100% {
-    height: 20vw;
-  }
+  color: rgb(224, 224, 224);
+  text-align: center;
+  cursor: pointer;
 }
 
 @keyframes gradient {
