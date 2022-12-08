@@ -76,17 +76,17 @@ const Home: NextPage = () => {
             </span>
           </div>
           <div className={styles.githubSection}>
-            <a href="https://github.com/ErickKoga" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/ErickKoga"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className={styles.gitButton}>
                 <p>Confira meu GitHub!</p>
                 <SiGithub />
               </div>
             </a>
-            <h3>Algumas das coisas que estou trabalhando</h3>
-            <p><b>API Boilerplate</b>: uma base em back-end com autenticação, autorização e cadastro.</p>
-            <p><b>Portfolio</b>: meu site pessoal.</p>
           </div>
-          
         </section>
         <section className={styles.contact} id="contact">
           <h2>Fale comigo</h2>
@@ -102,17 +102,29 @@ const Home: NextPage = () => {
             <p>erick.koga@outlook.com</p>
           </div>
           <div className={styles.buttonBox}>
-            <a href="https://github.com/ErickKoga" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/ErickKoga"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p className={styles.contactButton}>
                 <SiGithub /> GitHub
               </p>
             </a>
-            <a href="https://linkedin.com/in/erick-koga" target="_blank" rel="noreferrer">
+            <a
+              href="https://linkedin.com/in/erick-koga"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p className={styles.contactButton}>
                 <SiLinkedin /> LinkedIn
               </p>
             </a>
-            <a href="https://wa.me/+5531996868416" target="_blank" rel="noreferrer">
+            <a
+              href="https://wa.me/+5531996868416"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p className={styles.contactButton}>
                 <FaWhatsappSquare /> Whatsapp
               </p>
