@@ -22,7 +22,6 @@ import {
   SiReact,
 } from "react-icons/si";
 import styles from "../../styles/Curriculum.module.css";
-
 const Curriculum: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -34,16 +33,17 @@ const Curriculum: NextPage = () => {
           <h3>02/2022 – REDE MELHOR COMPRA ASSESSORIA ADMINISTRATIVA</h3>
           <h4>Desenvolvedor de sistemas</h4>
           <p>
-            Gerenciar a equipe do departamento de TI, gerência de projetos,
+            Liderar a equipe do departamento de TI, gerência de projetos,
             desenvolvimento e manutenção do front-end e back-end dos sistemas da
-            empresa.
+            empresa. Criação de sistemas hospedados em nuvem de consulta e
+            integração com softwares de terceiros.
           </p>
           <h3>02/2021 a 02/2022 – POWER TEST COMISSIONAMENTO</h3>
           <h4>Auxiliar Administrativo</h4>
           <p>
             Criação e gerenciamento de PowerBI, aplicação de soluções baseadas
             em VBA com o Pacote Office, suporte técnico, auxiliar todos os
-            departamentos em processos administrativos.{" "}
+            departamentos em processos administrativos.
           </p>
           <h3>06/2013 a 06/2014 – NO BUGS EMPRESA JÚNIOR DE INFORMÁTICA</h3>
           <h4>Gerente de TI </h4>
@@ -56,8 +56,14 @@ const Curriculum: NextPage = () => {
           <h2 className={styles.lineSeparator}>
             <FaBook /> Formação
           </h2>
-          <p>UNIVERSIDADE FEDERAL DE VIÇOSA (incompleto)</p>
-          <p>2013 a 2015 – Curso de ciência da computação</p>
+          <p>
+            <b>UNIVERSIDADE FEDERAL DE VIÇOSA (incompleto)</b>
+          </p>
+          <p>2013 a 2015 – Curso de ciência da computação.</p>
+          <p>
+            <b>PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS (cursando)</b>
+          </p>
+          <p>2023 a 2026 – Curso de sistemas de informação.</p>
         </section>
         <section className={styles.card}>
           <h2 className={styles.lineSeparator}>
@@ -121,5 +127,4 @@ const Curriculum: NextPage = () => {
     </div>
   );
 };
-
 export default Curriculum;
