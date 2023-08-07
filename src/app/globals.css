@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-black min-h-screen w-full;
+  }
+
+  h1 {
+    @apply text-2xl font-thin;
+  }
+  h2 {
+    @apply text-xl font-extralight;
+  }
+  h3 {
+    @apply text-lg font-light;
+  }
+}
