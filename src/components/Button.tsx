@@ -1,18 +1,20 @@
-// Importing dependencies
+// Library imports
 import { VariantProps, cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-// Configurations and definitions
+// Style variants
 const buttonVariants = cva(
   "flex items-center justify-center gap-2 leading-none p-2 rounded-sm",
   {
     variants: {
       intent: {
-        primary: "bg-black hover:bg-zinc-600 text-white",
-        secondary: "ring-1 ring-black hover:bg-black hover:text-white",
-        ghost: "hover:ring-1 ring-black",
+        primary: "bg-zinc-700 hover:bg-zinc-500 text-zinc-100",
+        secondary:
+          "ring-1 ring-zinc-700 hover:bg-zinc-500 hover:ring-0 hover:text-zinc-100",
+        ghost: "hover:ring-1 ring-zinc-700",
       },
       size: {
+        sm: "h-fit w-fit",
         lg: "h-12 w-fit p-2",
         wide: "w-full",
       },
@@ -31,6 +33,7 @@ export interface ButtonProps extends VariantProps<typeof buttonVariants> {
   className?: string;
   ariaLabel?: string;
   type?: "button" | "submit" | "reset";
+  href?: string;
 }
 
 // Component definition
@@ -42,18 +45,39 @@ const Button = ({
   size,
   ariaLabel,
   type = "button",
+  href,
   ...props
-}: ButtonProps) => (
-  <button
-    type={type}
-    role="button"
-    aria-label={ariaLabel || undefined}
-    className={twMerge(buttonVariants({ intent, size }), className)}
-    onClick={onClick}
-    {...props}
-  >
-    {children}
-  </button>
-);
+}: ButtonProps) => {
+  // If href is passed, render as <a>
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={twMerge(buttonVariants({ intent, size }), className)}
+        role="link"
+        target="_blank"
+        rel="noreferrer"
+        aria-label={ariaLabel || undefined}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  // If href is not passed, render as <button>
+  return (
+    <button
+      type={type}
+      role="button"
+      aria-label={ariaLabel || undefined}
+      className={twMerge(buttonVariants({ intent, size }), className)}
+      onClick={onClick}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
 
 export default Button;

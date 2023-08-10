@@ -1,54 +1,58 @@
 "use client";
 
-// Importing dependencies
-import { links } from "@/helpers/navlinks";
+// Library imports
 import Link from "next/link";
-import { useState } from "react";
 import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
-import Button from "./Button";
+
+// Internal imports
+import Button from "@/components/Button";
+import { links } from "@/helpers/navlinks";
+import { useNavbarStore } from "@/stores/navbarStore.ts";
 
 // Component definition
 const Navbar = () => {
-  const [expand, setExpand] = useState<boolean>(true);
+  // State and actions
+  const { expand, toggleExpand } = useNavbarStore();
 
-  const handleExpandToggle = () => setExpand(!expand);
-
+  // Component render
   return (
-    <div className="z-10 flex flex-col items-center h-screen gap-4 p-4 shadow-2xl bg-gradient-to-r from-slate-50 to-white">
-      <h1
-        style={{
-          textOrientation: "upright",
-          writingMode: "vertical-lr",
-          textShadow: "1px 1px 4px #525b56",
-        }}
+    <header className="shadow-2xl bg-zinc-700 text-zinc-100 sm:bg-zinc-100 sm:text-zinc-700">
+      <div className="flex items-center justify-between gap-4 p-4 sm:flex-col">
+        <Button intent="ghost" className="h-fit" href="/">
+          <h1 className="orientation-upright vertical-writing-lr">古雅</h1>
+        </Button>
+        <Button
+          ariaLabel="Toggle expansion"
+          intent="secondary"
+          size="wide"
+          className="justify-center w-10 h-10 rotate-90 sm:w-full sm:rotate-0 ring-zinc-100 sm:ring-zinc-700 sm:h-fit"
+          onClick={toggleExpand}
+        >
+          {expand ? <IoChevronBackOutline /> : <IoChevronForwardOutline />}
+        </Button>
+      </div>
+      <div
+        className={`absolute w-full sm:static bg-zinc-100 text-zinc-700 shadow-2xl sm:shadow-none sm:block ${
+          !expand && "hidden"
+        }`}
       >
-        古雅
-      </h1>
-      <Button
-        ariaLabel="Toggle expansion"
-        intent="secondary"
-        size="wide"
-        className="justify-end"
-        onClick={handleExpandToggle}
-      >
-        {expand ? <IoChevronBackOutline /> : <IoChevronForwardOutline />}
-      </Button>
-      <div>
         {links.map((link) => (
           <Link key={link.label} href={link.url}>
             <Button
               ariaLabel={`Navigate to ${link.label}`}
               intent="ghost"
               size="wide"
-              className="justify-start whitespace-nowrap"
+              className={`${
+                expand ? "justify-start" : "justify-center"
+              } whitespace-nowrap hover:font-medium`}
             >
               {link.icon}
-              {expand ? link.label : undefined}
+              {expand && link.label}
             </Button>
           </Link>
         ))}
       </div>
-    </div>
+    </header>
   );
 };
 

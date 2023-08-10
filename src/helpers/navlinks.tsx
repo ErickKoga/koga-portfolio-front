@@ -19,17 +19,17 @@ export const links: Link[] = [
   },
   {
     label: "Sobre mim",
-    url: "/",
+    url: "/about",
     icon: <IoPersonOutline />,
   },
   {
     label: "Portfólio",
-    url: "/",
+    url: "/portfolio",
     icon: <IoAlbumsOutline />,
   },
   {
     label: "Contato",
-    url: "/",
+    url: "/contact",
     icon: <IoMailOutline />,
   },
 ];
