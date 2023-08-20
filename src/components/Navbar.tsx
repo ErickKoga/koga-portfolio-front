@@ -16,7 +16,7 @@ const Navbar = () => {
 
   // Component render
   return (
-    <header className="shadow-2xl bg-zinc-700 text-zinc-100 sm:bg-zinc-100 sm:text-zinc-700">
+    <header className="z-50 shadow-2xl bg-zinc-900 text-zinc-100 sm:bg-zinc-100 sm:text-zinc-900">
       <div className="flex items-center justify-between gap-4 p-4 sm:flex-col">
         <Button intent="ghost" className="h-fit" href="/">
           <h1 className="orientation-upright vertical-writing-lr">古雅</h1>
@@ -25,14 +25,14 @@ const Navbar = () => {
           ariaLabel="Toggle expansion"
           intent="secondary"
           size="wide"
-          className="justify-center w-10 h-10 rotate-90 sm:w-full sm:rotate-0 ring-zinc-100 sm:ring-zinc-700 sm:h-fit"
+          className="justify-center w-10 h-10 rotate-90 sm:w-full sm:rotate-0 ring-zinc-100 sm:ring-zinc-900 sm:h-fit"
           onClick={toggleExpand}
         >
           {expand ? <IoChevronBackOutline /> : <IoChevronForwardOutline />}
         </Button>
       </div>
       <div
-        className={`absolute w-full sm:static bg-zinc-100 text-zinc-700 shadow-2xl sm:shadow-none sm:block ${
+        className={`absolute w-full sm:static bg-zinc-100 text-zinc-900 shadow-2xl sm:shadow-none sm:block ${
           !expand && "hidden"
         }`}
       >

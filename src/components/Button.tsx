@@ -8,10 +8,10 @@ const buttonVariants = cva(
   {
     variants: {
       intent: {
-        primary: "bg-zinc-700 hover:bg-zinc-500 text-zinc-100",
+        primary: "bg-zinc-900 hover:bg-zinc-500 text-zinc-100",
         secondary:
-          "ring-1 ring-zinc-700 hover:bg-zinc-500 hover:ring-0 hover:text-zinc-100",
-        ghost: "hover:ring-1 ring-zinc-700",
+          "ring-1 ring-zinc-900 hover:bg-zinc-500 hover:ring-0 hover:text-zinc-100",
+        ghost: "hover:ring-1 ring-zinc-900",
       },
       size: {
         sm: "h-fit w-fit",
