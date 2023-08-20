@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-zinc-100 text-zinc-700 min-h-screen w-full;
+    @apply bg-zinc-100 text-zinc-900 min-h-screen w-full;
   }
 
   h1 {
@@ -15,5 +15,11 @@
   }
   h3 {
     @apply text-lg font-light;
+  }
+}
+
+@layer utilities {
+  .header {
+    @apply w-fit mb-4 p-2 bg-zinc-900 text-zinc-100;
   }
 }
