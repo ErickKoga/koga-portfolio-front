@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Button from "@/components/Button";
 import BasePage from "@/components/layout/Basepage";
 
@@ -10,12 +12,11 @@ const HomePage = () => {
         </h1>
         <h2 className="text-4xl">Sou um desenvolvedor full-stack</h2>
         <div className="flex gap-4">
-          <Button intent="secondary" size="lg" ariaLabel="Abrir meu currículo">
-            Meu currículo
-          </Button>
-          <Button intent="primary" size="lg" ariaLabel="Ver meus projetos">
-            Meus projetos
-          </Button>
+          <Link href="/portfolio">
+            <Button intent="primary" size="lg" ariaLabel="Ver meus projetos">
+              Meus projetos
+            </Button>
+          </Link>
         </div>
       </section>
     </BasePage>
