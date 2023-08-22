@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-zinc-100 text-zinc-900 min-h-screen w-full;
+  }
+
+  h1 {
+    @apply text-2xl font-thin;
+  }
+  h2 {
+    @apply text-xl font-extralight;
+  }
+  h3 {
+    @apply text-lg font-light;
+  }
+}
+
+@layer utilities {
+  .header {
+    @apply underline w-fit mb-4 p-2;
+  }
+}
