@@ -6,6 +6,6 @@ type NavbarState = {
 }
 
 export const useNavbarStore = create<NavbarState>((set) => ({
-  expand: true,
+  expand: false,
   toggleExpand: () => set((state) => ({ expand: !state.expand }))
 }));
