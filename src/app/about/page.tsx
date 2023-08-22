@@ -1,4 +1,5 @@
 "use client";
+import profileImage from "@/assets/profile.png";
 import ProgressBar from "@/components/Progress";
 import BasePage from "@/components/layout/Basepage";
 import Image from "next/image";
@@ -52,7 +53,7 @@ const AboutPage = () => {
     <BasePage>
       <section className="flex flex-col h-full gap-8 p-4 justify-evenly">
         <Image
-          src="/profile.png"
+          src={profileImage}
           alt="Foto de perfil do autor"
           width={160}
           height={160}

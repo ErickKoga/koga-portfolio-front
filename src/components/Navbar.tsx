@@ -44,7 +44,7 @@ const Navbar = () => {
               size="wide"
               className={`${
                 expand ? "justify-start" : "justify-center"
-              } whitespace-nowrap hover:font-medium`}
+              } whitespace-nowrap`}
             >
               {link.icon}
               {expand && link.label}
