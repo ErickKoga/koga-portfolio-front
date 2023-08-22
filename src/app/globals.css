@@ -20,6 +20,6 @@
 
 @layer utilities {
   .header {
-    @apply w-fit mb-4 p-2 bg-zinc-900 text-zinc-100;
+    @apply underline w-fit mb-4 p-2;
   }
 }
