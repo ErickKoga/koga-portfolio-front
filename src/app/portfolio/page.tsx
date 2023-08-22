@@ -1,3 +1,6 @@
+import appRmcImage from "@/assets/app-rmc.webp";
+import easynr10Image from "@/assets/easynr10.webp";
+import sarImage from "@/assets/sar.webp";
 import Button from "@/components/Button";
 import BasePage from "@/components/layout/Basepage";
 import Image from "next/image";
@@ -9,7 +12,7 @@ const portfolioList = [
     description:
       "Interface única integrando todos os sistemas voltados ao cliente, incluindo downloads de materiais publicitários, acesso a sistemas e acompanhamento de novidades.",
     image: {
-      src: "/portfolio/app-rmc.webp",
+      src: appRmcImage,
       alt: "Tela do App RMC",
     },
   },
@@ -18,7 +21,7 @@ const portfolioList = [
     description:
       "Gestor de documentação NR-10 para empresa, equipamentos e equipes. Possui gráficos interativos, customização, suporte a documentos e alertas para vencimentos.",
     image: {
-      src: "/portfolio/easynr10.webp",
+      src: easynr10Image,
       alt: "Tela de login do EasyNR10",
     },
   },
@@ -27,7 +30,7 @@ const portfolioList = [
     description:
       "Sistema de planejamento de projetos com gráfico Gantt autoral e tabelas interativas. Permite integração com o sistema da empresa e detecção de conflitos de atribuições.",
     image: {
-      src: "/portfolio/sar.webp",
+      src: sarImage,
       alt: "Tela do sistema SAR",
     },
   },
@@ -46,7 +49,7 @@ const PortfolioPage = () => {
             >
               <div className="relative w-full aspect-[2/1]">
                 <Image
-                  key={portfolioItem.image.src}
+                  key={portfolioItem.name}
                   src={portfolioItem.image.src}
                   fill
                   quality={100}
