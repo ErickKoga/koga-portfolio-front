@@ -1,7 +1,6 @@
 import {
   IoAlbumsOutline,
   IoHomeOutline,
-  IoMailOutline,
   IoPersonOutline,
 } from "react-icons/io5";
 
@@ -26,10 +25,5 @@ export const links: Link[] = [
     label: "Portfólio",
     url: "/portfolio",
     icon: <IoAlbumsOutline />,
-  },
-  {
-    label: "Contato",
-    url: "/contact",
-    icon: <IoMailOutline />,
   },
 ];
